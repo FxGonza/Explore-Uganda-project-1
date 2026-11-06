@@ -1,0 +1,161 @@
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+   
+}
+
+.section-title h1 {
+    color: purple;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+.section-title span {
+    height: 2px;
+    background-color: purple;
+    flex: 1;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 250px);
+    gap: 20px;
+    padding-top: 5px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-content {
+    background-color:blueviolet;
+    padding: 3px;
+
+}
+
+.card-content p {
+    color:white;
+    font-size: 12px;
+    font-weight: bold;
+}
+.card:hover{
+    transform: scale(1.5)
+}
+.image-text {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.image-text img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+.image-text img:hover{
+    transform: scale(1.1);
+}
+.content-background{
+    background-color: beige;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-top: 50px;
+    opacity: 85%;
+}
+body {
+    background-image: url("water.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.left-words {
+    flex: 1;
+    text-align: left;
+}
+
+.left-words h2 {
+    color: purple;
+    font-size: 24px;
+}
+
+.left-words p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.Learn-btn {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.Learn-btn:hover {
+    text-decoration: none;
+    background-color: orange;
+    color: black;
+}
+footer {
+    background-color: blueviolet;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 75%;
+    .footer p{
+        margin: 0%;
+    }
+}
+.social-logos {
+    display: flex;
+    gap: 10px;
+}
+
+.social-logos img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+    h2{text-align: left;
+        font-family:serif;
+        font-size: 200%;
+        color:#FFF4D6;
+        margin: 1%;
+    
+        }
+
+    h1{text-align: left;
+        font-family: serif;
+        font-size: 400%;
+        color:goldenrod;
+        text-decoration:underline;
+        margin: 1%;
+    }
