@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore Uganda - Navigation Bar</title>
+<style>
+  :root {
+    --purple-dark: #2e1a5e;
+    --purple-main: #6a2bd0;
+    --purple-hover: #4a2a8f;
+    --gold: #fbc531;
+    --white: #ffffff70;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+    background: #f4f1fa;
+    color: #2e1a5e;
+  }
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--purple-dark);
+    color: var(--white);
+    box-shadow: 0 2px 12px rgba(0, 34, 0, 3.37);
+  }
+
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  .brand svg { width: 64px; height: 48px; flex-shrink: 0; }
+
+  .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+
+  .brand-name {
+    font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+    font-style: italic;
+    font-size: 2rem;
+    letter-spacing: 0.01em;
+  }
+
+  .brand-tagline {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding-left: 1.4rem;
+    letter-spacing: 0.02em;
+  }
+
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.7rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+
+  .nav-links a:hover { background-color: #2e1a5e; }
+
+  .nav-links a[aria-current="page"] {
+    background: var(--purple-main);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  .nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+
+  .nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 0.6rem;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+    position: relative;
+  }
+  .nav-toggle-label span::before { position: absolute; top: -9px; }
+  .nav-toggle-label span::after  { position: absolute; top: 9px; }
+
+  .nav-toggle:focus-visible + .nav-toggle-label {
+    outline: 3px solid var(--gold);
+    border-radius: 6px;
+  }
+
+  @media (max-width: 860px) {
+    .nav-inner { height: 74px; }
+    .brand-name { font-size: 1.6rem; }
+    .brand svg { width: 52px; height: 40px; }
+
+    .nav-toggle-label { display: block; }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 10px;
+      right: 1px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.25rem;
+      background: var(--purple-dark);
+      padding: 0.5rem 1.5rem 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .nav-toggle:checked ~ .nav-links { display: flex; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+
+  
+</style>
+</head>
+<body>
+
+<header class="navbar">
+  <nav class="nav-inner" aria-label="Main navigation">
+
+    <a href="index.html" class="brand" aria-label="Explore Uganda home">
+      <svg viewBox="0 0 64 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="peak" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffd84d"/>
+            <stop offset="1" stop-color="#f08a24"/>
+          </linearGradient>
+        </defs>
+        <polygon points="0,46 26,4 42,28 50,16 64,46" fill="url(#peak)"/>
+        <polygon points="26,4 34,18 28,16 22,22 18,20" fill="rgb(255,243,176)" opacity="0.7"/>
+      </svg>
+      <div class="brand-text">
+        <div class="brand-name">Explore Uganda</div>
+        <div class="brand-tagline">Discover &bull; Travel &bull; Enjoy</div>
+        </div>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+    <label for="nav-toggle" class="nav-toggle-label"><div></div></label>
+
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="destinations">Destinations</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="gallery">Gallery</a></li>
+      <li><a href="contact ">Contact</a></li>
+    </ul>
+
+  </nav>
+</header>
+</body>
+</html>
