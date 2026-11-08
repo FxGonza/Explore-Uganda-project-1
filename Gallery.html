@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gallery</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f0;
+        }
+
+        .gallery-section {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .gallery-section h1 {
+            font-size: 35px;
+            color: #174c35;
+            margin-bottom: 15px;
+        }
+
+        .gallery-section p {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+
+        .gallery-item {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.4s ease;
+        }
+
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.2);
+        }
+
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 25px 15px;
+            color: white;
+            text-align: left;
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,0.9)
+            );
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .overlay p {
+            font-size: 14px;
+            color: white;
+            margin-bottom: 0;
+        }
+        .category-title {
+    font-size: 26px;
+    color: #174c35;
+    text-align: left;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-left: 5px solid #d6b56d;
+    padding-left: 12px;
+}
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="gallery-section">
+
+        <h1>Explore Our Gallery</h1>
+
+        <p>Discover the beauty and wonders of the Pearl of Africa.</p>
+         <h2 class="category-title">Landforms</h2>
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="Murchison falls.jpg" alt="Murchison Falls">
+                <div class="overlay">
+                    <h3>Murchison Falls</h3>
+                    <p>Experience the magnificent power of the Nile.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Rwenzori.jpg" alt="Mount Rwenzori Peak">
+                <div class="overlay">
+                    <h3>Mount Rwenzori Peak</h3>
+                    <p>Discover the highest peak in Uganda</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Semuliki.jpg" alt="Semuliki Hotsprings">
+                <div class="overlay">
+                    <h3>Semuliki Hotsprings</h3>
+                    <p>Feel the Heat of Nature's Hidden Treasure</p>
+                </div>
+            </div>
+        </div>
+
+    <h2 class="category-title">Wildlife</h2>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Giraffe.jpg" alt="Giraffes">
+                <div class="overlay">
+                    <h3>Giraffes</h3>
+                    <p>Found in Kidepo National Park</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="lion.jpg" alt="Climbing lions">
+                <div class="overlay">
+                    <h3>Climbing lions</h3>
+                    <p>Found in Queen Elizabeth National Park</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="rhino.JPG" alt="rhino">
+                <div class="overlay">
+                    <h3>African Rhinos</h3>
+                    <p>Get close to Uganda's magnificent rhinos at Ziwa Rhino Sanctuary.</p>
+                </div>
+            </div>
+
+             <div class="gallery-item">
+                <img src="Zebra 6.jpg" alt="zebra">
+                <div class="overlay">
+                    <h3>Zebras</h3>
+                    <p>Found at Lake Mburo National Park</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="Chimp.JPG" alt="chimp">
+                <div class="overlay">
+                    <h3>Chimpanzees</h3>
+                    <p>Found at Bwindi Impenetrable National Park</p>
+                </div>
+            </div>
+
+             <div class="gallery-item">
+                <img src="crane.jpg" alt="crane">
+                <div class="overlay">
+                    <h3>Grey Crowned Crested Crane</h3>
+                    <p>The National emblem of Uganda</p>
+                </div>
+            </div>
+        </div>
+    
+
+    </section>
+
+</body>
+</html>
